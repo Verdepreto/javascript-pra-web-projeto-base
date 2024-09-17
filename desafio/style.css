@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --cor-primaria: rgb(20, 9, 46);
+    --cor-botao: #9353FF;
+    --cor-botao-hover: #ba92ff;
+    --cor-neutra: white;
+    --font-textos: "Inter", sans-serif;
+    --bg-gradient: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 101, 1) 54%, rgba(0, 212, 255, 1) 100%);
+}
+
+body {
+    height: 100vh;
+    background: var(--bg-gradient);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    background: var(--cor-neutra);
+    border: 2px solid var(--cor-primaria);
+    text-align: center;
+    margin: auto;
+    width: 729px;
+}
+
+h2 {
+    margin: 40px 0;
+    font-family: var(--font-textos);
+    color: var(--cor-primaria);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.input-text {
+    padding: 7px 15px;
+    width: 75%;
+    border-radius: 15px;
+    border: solid 1px var(--cor-primaria);
+}
+
+.input-text::placeholder{
+    font-family: var(--font-textos);
+}
+
+
+.botao-enviar {
+    margin: 40px 0;
+    font-family: var(--font-textos);
+    background: var(--cor-botao);
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    color: var(--cor-neutra);
+}
+
+.botao-enviar:hover {
+    background: var(--cor-botao-hover);
+    cursor: pointer;
+}
+
+.checkbox-botao {
+    display:inline-flex ;
+    
+}
+.checkbox-input{
+    display: none;
+}
+
+.checkbox-customizado{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: var(--cor-neutra);
+    border: 1px solid var(--cor-primaria);
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.checked{
+    background: var(--cor-primaria);
+    position: relative;
+}
+.checked::after{
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    width: 5px;
+    height: 14px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transform: rotate(-140deg);
+}
+.lista-item{
+    display: flex;
+    justify-content: center;
+    color: var(--cor-primaria);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
